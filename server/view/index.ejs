@@ -1,0 +1,10 @@
+
+    <h1>Artikel</h1>
+
+    <% news.forEach( (item, index) => { %>
+        <div>
+            <a href="/news/<%= item.slug %>">
+                #<%= (index+1) + ' ' + item.title %>
+            </a>
+        </div>
+    <% }); %>
