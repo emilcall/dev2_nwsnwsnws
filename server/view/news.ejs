@@ -1,3 +1,9 @@
-<%= article.title %> <br>
-<%= article.content %> <br>
-<%= article.date %>
+
+<% if( news.length === 0 ) { %>
+  <p>Er is geen nieuws beschikbaar</p>
+<% } else { %>
+    <% news.forEach((item) => { %>
+        <h2><%= item.title %></h2>
+        <p><%= item.content %></p>
+    <% }) %>
+<% } %>
